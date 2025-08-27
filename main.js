@@ -22,13 +22,13 @@ const discountOld = 40;
         )
     }
 // Calcolo sconto
-const sumDiscChild = (ticketCost * km) / (discountChild);
-const sumDiscOld = (ticketCost * km) / (discountOld);
+const sumDiscChild= (ticketCost * km) / 100 * discountChild;
+const sumDiscOld= (ticketCost * km) / 100 * discountOld ;
 
 if (age <= 17) {
-    console.log(`Lo sconto è di: ${sumDiscChild} €`);
+    console.log(`Lo sconto è di: ${sumDiscChild.toFixed(2)} €`);
 }  else if (age >= 65) {
-    console.log(`Lo sconto è di: ${sumDiscOld} €`);
+    console.log(`Lo sconto è di: ${sumDiscOld.toFixed(2)} €`);
 }
 
 // Calcolo totale da pgare
@@ -38,9 +38,9 @@ const sumOld = (ticketCost * km) - sumDiscOld;
 
 
 if (age <= 17) {
-    console.log(`Il totale da pagare è di ${sumChild} €`);
+    console.log(`Il totale da pagare è di ${sumChild.toFixed(2)} €`);
 } else if ((age >= 18) && (age <64)) {
-    console.log(`Il totale da pagare è di ${sumEntire} €`);
+    console.log(`Il totale da pagare è di ${sumEntire.toFixed(2)} €`);
 }  else {
-    console.log(`Il totale da pagare è di ${sumOld} €`);
+    console.log(`Il totale da pagare è di ${sumOld.toFixed(2)} €`);
 }
