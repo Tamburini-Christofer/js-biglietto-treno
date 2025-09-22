@@ -21,6 +21,7 @@ const discountOld = 40;
         console.log("In quanto Over 60 hai accesso allo sconto Over 65!!!"
         )
     }
+
 // Calcolo sconto
 const sumDiscChild= (ticketCost * km) / 100 * discountChild;
 const sumDiscOld= (ticketCost * km) / 100 * discountOld ;
@@ -44,3 +45,4 @@ if (age <= 17) {
 }  else {
     console.log(`Il totale da pagare è di ${sumOld.toFixed(2)} €`);
 }
+
